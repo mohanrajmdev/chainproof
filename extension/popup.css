@@ -19,23 +19,28 @@ body {
 }
 #cnum{
     display: block; 
-margin: 0.5rem; 
-margin-bottom: 0.5rem; 
-font-size: 1.125rem;
-line-height: 1.75rem; 
-font-weight: 500; 
-color: white; 
+    margin: 0.5rem; 
+    margin-bottom: 0.5rem; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 500; 
+    color: white; 
 }
 .title{
     text-align: center;
     font-size: 30px;
-    padding: 7px;
+    padding: 5px;
 }
 
 a{
     color:chartreuse;
     text-decoration: none;
 }
+
+#message{
+    font-size: 18px;
+}
+
 .margin-8{
     margin:8px;
 }
@@ -122,8 +127,8 @@ a{
 }
 
 .footer{
-    text-align: center;
-    font-size: 14px;
+    text-align:center;
+    font-size: 18px;
 }
 
 /* .ml {

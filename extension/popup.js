@@ -5,7 +5,7 @@ if (navigator.onLine) {
     document.getElementById('verifyId').addEventListener('click',handleVerify);
 function handleCreateBtn(){
     document.getElementById('create').style.display='block';
-    document.getElementById('createBtn').style.color='green';
+    document.getElementById('createBtn').style.color='chartreuse';
     document.getElementById('verifyBtn').style.color='white';
     document.getElementById('verify').style.display='none';
 }
@@ -14,31 +14,40 @@ function handleVerifyBtn(){
     document.getElementById('create').style.display='none';
     document.getElementById('verify').style.display='block';
     document.getElementById('createBtn').style.color='white';
-    document.getElementById('verifyBtn').style.color='green';
+    document.getElementById('verifyBtn').style.color='chartreuse';
 }
-function handleVerify(){
+
+async function handleVerify(){
     const id = document.getElementById('cert-num').value.trim();
-    console.log(id);
     if(id.startsWith("CHAIN-ID-") || id.startsWith("chain-id-")){
-        
+       await downloadFile(`https://ipfs.io/ipfs/${id.substring(9)}`,'certificate.pdf');
+       document.getElementById('message').innerHTML="Valid Certificate";
+       document.getElementById('message').style.color='chartreuse';
+    }
+    else{
+        document.getElementById('message').innerHTML="Not Valid Certificate";
+        document.getElementById('message').style.color='red';
     }
 }
 
-function downloadFile(url, fileName) {
-    fetch(url, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
-      .then(res => res.blob())
-      .then(res => {
-        const aElement = document.createElement('a');
-        aElement.setAttribute('download', fileName);
-        const href = URL.createObjectURL(res);
-        aElement.href = href;
-        aElement.setAttribute('target', '_blank');
-        aElement.click();
-        URL.revokeObjectURL(href);
-      });
-  };
+async function downloadFile(url, fileName) {
+    await fetch(url).then((response) => {
+        response.blob().then((blob) => {
+         
+            // Creating new object of PDF file
+            const fileURL =
+                window.URL.createObjectURL(blob);
+                 
+            // Setting various property values
+            let alink = document.createElement("a");
+            alink.href = fileURL;
+            alink.download = fileName;
+            alink.click();
+        });
+    });
     
-
+  };
+  
 }
 else{
     document.getElementById('content').innerText = "No Internet Connection";
