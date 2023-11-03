@@ -2,15 +2,18 @@
     "manifest_version": 3,
     "name": "ChainProof",
     "version": "1.0.0",
+    "permissions": ["storage", "tabs","scripting"],
+    "host_permissions": ["https://*/"],
     "description": "Document Validation using Blockchain",
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "logo.png"
+        "default_icon": "darklogo.png",
+        "default_title": "ChainProof Extension"
     },
     "icons": {
-        "16": "logo.png",
-        "32": "logo.png",
-        "48": "logo.png",
-        "128": "logo.png"
+        "16": "darklogo.png",
+        "32": "darklogo.png",
+        "48": "darklogo.png",
+        "128": "darklogo.png"
     }
 }
