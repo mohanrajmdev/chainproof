@@ -1,6 +1,6 @@
 # ChainProof: Securing Documents and Issuing Immutable Certificates with Blockchain and React
 
-![ChainProof Logo](logoo.png)
+![chainproof Logo](logoo.png)
 
 ## Introduction
 ChainProof represents a cutting-edge solution for securing documents and issuing immutable certificates. Powered by the combination of blockchain and React, this platform sets a new standard for document integrity and certificate authenticity.
@@ -19,18 +19,18 @@ ChainProof represents a cutting-edge solution for securing documents and issuing
 4. **Decentralized Assurance:** Leverage decentralized nodes for reliable and robust storage of critical documents and certificates.
 
 ## Getting Started
-To begin using ChainProof, follow these steps:
-1. Clone the repository: `git clone https://github.com/waseem0605/ChainProof.git`
-2. Navigate to the project directory: `cd ChainProof`
+To begin using chainproof, follow these steps:
+1. Clone the repository: `git clone https://github.com/mohanrajmdev/chainproof.git`
+2. Navigate to the project directory: `cd chainproof`
 3. Install the required dependencies: `npm install`
 4. Launch the application: `npm start`
 
 ## Open Source Freedom
-ChainProof operates under the [MIT License](https://github.com/waseem0605/ChainProof/blob/main/LICENSE), providing the freedom to modify, distribute, and adapt the source code based on the license terms.
+ChainpProof operates under the [MIT License](https://github.com/mohanrajmdev/chainproof), providing the freedom to modify, distribute, and adapt the source code based on the license terms.
 
-Experience the future of secure document management and certification with ChainProof! Explore the [ChainProof GitHub Repository](https://github.com/waseem0605/ChainProof) and discover the power of blockchain and React in elevating document security and certification processes.
+Experience the future of secure document management and certification with ChainProof! Explore the [ChainProof GitHub Repository](https://github.com/mohanrajmdev/chainproof) and discover the power of blockchain and React in elevating document security and certification processes.
 
 
-**Watch the ChainProof on YouTube:** [ChainProof Demo Video](https://www.youtube.com/watch?v=YOUR_DEMO_VIDEO_ID)
+**Watch the ChainProof on YouTube:** [chainproof Demo Video](https://youtube.com/playlist?list=PLQrcLadPwC0AU-XMmgZaeVTTD5RjZD0UI&feature=shared)
 
 ---
