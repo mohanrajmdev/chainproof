@@ -63,7 +63,7 @@ const Verify = () => {
                   <div className={" border-[2px] shadow-lg h-[600px] w-[60%] rounded-md mt-5 mr-5 " }>
                       <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
                         <Viewer fileUrl={`https://ipfs.io/ipfs/${hash}`} defaultScale={SpecialZoomLevel.PageFit}  plugins={[defaultLayoutPluginInstance]}  />
-                    </Worker>
+                      </Worker>
 
                   </div>
                   

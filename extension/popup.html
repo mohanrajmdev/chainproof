@@ -7,12 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
 
     <title>Chainproof Extension</title>
 </head>
 
 <body>
-    <h1 class="ml title">Certificate Validation using blockchain</h1>
+    <div class="container">
+        <h1 class="title">ChainProof Extension</h1>
+        <div id="content">
+            <!-- Two button  -->
+            <button class="btn" id="createBtn" >Create</button>
+            <button class="btn" id="verifyBtn" >Verify</button>
+
+            <!-- create Page -->
+            <div class="create" id="create">
+                <h1>Create Certificate using blockchain</h1>
+                <input type="file">
+
+            </div>
+
+            <!-- Verification Page -->
+            <div class="verify" id="verify">
+                <div id="headverify">
+                    <div class='margin-8'>Certificate Verification <span class=' yellow'>Portal</span></div> 
+                      <div class='margin-16'>Powered by <span class=' blue'>FalkonX</span></div>
+                </div>
+                <div id="cnum2">
+
+                    <div id="cnum">Certificate Number</div>
+    
+                    <input type="text" id="cert-num" placeholder="CHAIN-ID-bafkreigfvngoydofemwj" required ></input>
+    
+                    <div id="verifyId">VERIFY</div>
+    
+                  </div>
+            </div>
+
+        </div>
+        <div class="footer">2023 @<a href="https://chainproofv2.vercel.app" class="text-green-500" target="_blank">Chainproof</a> </div>
+    </div>
     
 </body>
 

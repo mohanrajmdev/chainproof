@@ -4,14 +4,24 @@ import signature from "../assets/images/sign.png";
 import {Navbar, Footer} from "./";
 import html2canvas from "html2canvas";
 import {jsPDF} from "jspdf";
+import details from '../assets/details.pdf'
+import uploadFile from "../assets/images/upload-file.png";
 
 const Create = () => {
   const [name, setName] = useState("Your name");
+  const [message, setMessage] = useState();
   const [courseName, setCourseName] = useState("Course Name");
   const [hodName, setHodName] = useState("Depart of cse");
   const [collgName, setCollgName] = useState("College Name");
 
   const certificateRef = useRef(null);
+
+  const handleFile = async (e) => {
+    e.preventDefault();
+
+    let file = e.target.files[0];
+    setMessage(file.name);
+  };
 
   const handleDownloadPDF = () => {
     //use html2canvas to capture a screenshot of the certificate element
@@ -25,6 +35,10 @@ const Create = () => {
       pdf.save(`${name}_certificate`);
     });
   };
+
+  const handleDownloadDetails = () => {
+    
+  }
 
   const handleDownloadPNG = () => {
     //use html2canvas to capture a screenshot of the certificate element
@@ -200,7 +214,65 @@ const Create = () => {
             </button>
           </div>
         </div>
-      </div>
+        
+      </div >
+      <div className="text-yellow-300 text-5xl m-5 flex items-center justify-center ">OR</div>
+
+          <div className="text-white text-xl m-2 flex items-center justify-center flex-col">
+
+            <div className="m-2">Upload the details</div>
+
+            <div className="w-[60%] p-2">
+              
+              <div class="flex items-center justify-center w-[80%] bg-slate-200 rounded-md">
+                <label class="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center">
+                  <div class="h-full w-full text-center flex flex-col items-center justify-center  ">
+                    <div class="flex flex-auto max-h-48 w-2/5 mx-auto -mt-10">
+                      <img
+                        class="has-mask h-36 object-center"
+                        src={uploadFile}
+                        alt="freepik image"
+                      />
+                    </div>
+
+                    {message ? (
+                      <div className="text-black text-lg">{message}</div>
+                    ) : (
+                      <>
+                        <p class="pointer-none text-gray-500 ">
+                          <span class="text-sm">Drag and drop</span> files here{" "}
+                          <br /> or{" "}
+                          <a
+                            href=""
+                            id=""
+                            class="text-blue-600 hover:underline"
+                          >
+                            select a file
+                          </a>{" "}
+                          from your computer
+                        </p>
+                      </>
+                    )}
+                  </div>
+                  <input type="file" class="hidden" onChange={handleFile} />
+                </label>
+              </div>
+
+              <p class="text-lg text-gray-300 mt-4">
+                <span>File type: xlsx</span>
+              </p>
+              
+            </div>
+
+            {/* <button
+              type="button"
+              className="mx-4 mt-2 flex flex-row justify-center items-center my-1 bg-[#2952e3] p-2 rounded-xl cursor-pointer hover:bg-[#2546bd]"
+              onClick={handleDownloadDetails}
+            >
+              <p className="text-white text-lg font-semibold">Create Certificate</p>
+            </button> */}
+            <a href={details}   className="mx-4 mt-2 flex flex-row justify-center items-center my-1 bg-[#2952e3] p-2 rounded-xl cursor-pointer hover:bg-[#2546bd]" download="file">Create Certificate</a>
+          </div>
       <Footer />
     </div>
   );

@@ -140,6 +140,7 @@ const Upload = () => {
               <p class="text-lg text-gray-300 mt-4">
                 <span>File type: doc,pdf,types of images</span>
               </p>
+              
               <div>
                 <button
                   type="submit"

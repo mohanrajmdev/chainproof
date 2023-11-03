@@ -1,36 +1,45 @@
-const API_URL = "https://icanhazdadjoke.com"
-
 
 if (navigator.onLine) {
-    const request_new_joke = async () => {
-        const joke = await fetch(API_URL, {
-            method: "GET",
-            headers: { "Accept": "application/json" }
-        })
-            .then((response) => response.json())
-            .then((response) => response.joke)
-            .catch((err) => {
-                err
-            })
+    document.getElementById('createBtn').addEventListener('click',handleCreateBtn);
+    document.getElementById('verifyBtn').addEventListener('click',handleVerifyBtn);
+    document.getElementById('verifyId').addEventListener('click',handleVerify);
+function handleCreateBtn(){
+    document.getElementById('create').style.display='block';
+    document.getElementById('createBtn').style.color='green';
+    document.getElementById('verifyBtn').style.color='white';
+    document.getElementById('verify').style.display='none';
+}
 
-        document.getElementById('joke').innerText = joke
+function handleVerifyBtn(){
+    document.getElementById('create').style.display='none';
+    document.getElementById('verify').style.display='block';
+    document.getElementById('createBtn').style.color='white';
+    document.getElementById('verifyBtn').style.color='green';
+}
+function handleVerify(){
+    const id = document.getElementById('cert-num').value.trim();
+    console.log(id);
+    if(id.startsWith("CHAIN-ID-") || id.startsWith("chain-id-")){
+        
     }
+}
 
-    document.addEventListener("DOMContentLoaded", () => {
-        request_new_joke()
-    })
-
-    document.getElementById('new').addEventListener("click", () => {
-        request_new_joke()
-        document.getElementById('like').style.backgroundColor = "rgb(88, 221, 245)"
-        document.getElementById('like').innerText = "Like"
-    })
-    document.getElementById('like').addEventListener("click", () => {
-        document.getElementById('like').style.backgroundColor = "#008CBA"
-        document.getElementById('like').innerText = "Liked"
-    })
+function downloadFile(url, fileName) {
+    fetch(url, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
+      .then(res => res.blob())
+      .then(res => {
+        const aElement = document.createElement('a');
+        aElement.setAttribute('download', fileName);
+        const href = URL.createObjectURL(res);
+        aElement.href = href;
+        aElement.setAttribute('target', '_blank');
+        aElement.click();
+        URL.revokeObjectURL(href);
+      });
+  };
+    
 
 }
 else{
-    document.getElementById('joke').innerText = "No Internet Connection"
+    document.getElementById('content').innerText = "No Internet Connection";
 }
