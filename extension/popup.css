@@ -1,0 +1,44 @@
+body {
+    width: 300px;
+    background-color:cornsilk;
+}
+.ml {
+    margin: auto;
+    text-align: center;
+}
+.title {
+    text-align: center;
+}
+.container {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+}
+.joke {
+    text-align: justify;
+    top: 40%;
+    font-size: 15px;
+    padding: 10px;
+}
+.al-auto {
+    margin: 0;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+}
+.button1 {background-color: #4CAF50;}
+.button2 {background-color: rgb(88, 221, 245);}
