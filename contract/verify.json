@@ -1,0 +1,125 @@
+{
+    "contract-address":"0xa187aE41F61e57D754ad0b9d775b1107B5FEc6E6",
+    "abi":[
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_desc",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_ipfs",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_rollno",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_depart",
+                    "type": "string"
+                }
+            ],
+            "name": "addDoc",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                }
+            ],
+            "name": "getDoc",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "string",
+                            "name": "name",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "fileDescription",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "ipfs_hash",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "rollno",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "department",
+                            "type": "string"
+                        }
+                    ],
+                    "internalType": "struct Verify.Record[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_depart",
+                    "type": "string"
+                }
+            ],
+            "name": "getDocByDepart",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "string",
+                            "name": "name",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "fileDescription",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "ipfs_hash",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "rollno",
+                            "type": "string"
+                        }
+                    ],
+                    "internalType": "struct Verify.Depart[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ]
+}
