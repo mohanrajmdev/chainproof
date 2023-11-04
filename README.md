@@ -34,3 +34,5 @@ Experience the future of secure document management and certification with Chain
 **Watch the ChainProof on YouTube:** [chainproof Demo Video](https://youtube.com/playlist?list=PLQrcLadPwC0AU-XMmgZaeVTTD5RjZD0UI&feature=shared)
 
 
+**Get the Detailed Presentation about ChainProof:** [Presentation Drive](https://drive.google.com/file/d/1ZLElVTKP9wIcEboka1_1vD4H8E4Zd-JZ/view?usp=share_link)
+
