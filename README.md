@@ -1,4 +1,5 @@
 # ChainProof: Securing Documents and Issuing Immutable Certificates with Blockchain and React
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=mohanrajmdev_chainproof)](https://sonarcloud.io/summary/new_code?id=mohanrajmdev_chainproof)
 
 ![chainproof Logo](logoo.png)
 
@@ -29,6 +30,8 @@ To begin using chainproof, follow these steps:
 ChainpProof operates under the [MIT License](https://github.com/mohanrajmdev/chainproof), providing the freedom to modify, distribute, and adapt the source code based on the license terms.
 
 Experience the future of secure document management and certification with ChainProof! Explore the [ChainProof GitHub Repository](https://github.com/mohanrajmdev/chainproof) and discover the power of blockchain and React in elevating document security and certification processes.
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=mohanrajmdev_chainproof)
 
 
 **Watch the ChainProof on YouTube:** [chainproof Demo Video](https://youtube.com/playlist?list=PLQrcLadPwC0AU-XMmgZaeVTTD5RjZD0UI&feature=shared)
